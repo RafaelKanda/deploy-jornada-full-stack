@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 
-const { DB_URI } = dotenv.config().parsed;
+const { DB_URI } = dotenv.config().parsed ?? process.env;
 
 console.log(`Conexão: ${DB_URI}`);
 

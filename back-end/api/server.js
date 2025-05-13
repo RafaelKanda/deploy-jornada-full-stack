@@ -7,7 +7,6 @@ const app = express();
 const PORT = 3000;
 
 const __dirname = path.resolve();
-console.log(__dirname);
 
 app.use(cors());
 
