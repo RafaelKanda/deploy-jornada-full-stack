@@ -1,8 +1,10 @@
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
-const URI =
-  "mongodb+srv://rafael_kanda:mUn1ver$3@cluster0.nv19wnh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const { DB_URI } = dotenv.config().parsed;
 
-const client = new MongoClient(URI);
+console.log(`Conexão: ${DB_URI}`);
+
+const client = new MongoClient(DB_URI);
 
 export const db = client.db("spotify_clone");
